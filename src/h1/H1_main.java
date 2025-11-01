@@ -5,11 +5,12 @@ public class H1_main {
 		double guthaben, monEingang;
 		int rating;
 		boolean warnhinweis, negativ;
-		guthaben = -1;
-		monEingang = 0;
-		rating = 0;
+		guthaben = -100;
+		monEingang = 200;
+		rating = -2;
 		warnhinweis = true;
 		negativ = false;
+		//
 		if (guthaben < 0) {
 			negativ = true;
 			if (-1*monEingang <= guthaben) {
@@ -24,6 +25,14 @@ public class H1_main {
 				rating += 1;
 			}
 		}
-		System.out.print("negativ:"+negativ+", rating:"+rating);
+		warnhinweis = false;
+		if (guthaben<0) {
+			if (-1*monEingang > guthaben) {
+				if (rating <0) {
+					warnhinweis = true;
+				}
+			}
+		}
+		System.out.print("negativ:" + negativ + ", rating:" + rating+", warnhinweis:"+warnhinweis);
 	}
 }

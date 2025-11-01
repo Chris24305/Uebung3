@@ -5,7 +5,7 @@ public class H2_main {
 		int jahr;
 		boolean schalt;
 		jahr = 2000;
-		schalt = false;
+		schalt = true;
 		if (jahr % 4 == 0) {
 			if (jahr % 100 == 0) {
 				if (jahr % 400 == 0) {
@@ -19,6 +19,5 @@ public class H2_main {
 		} else {
 			schalt = false;
 		}
-		System.out.print(schalt);
 	}
 }
